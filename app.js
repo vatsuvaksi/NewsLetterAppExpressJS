@@ -15,7 +15,7 @@ app.post("/",function(req,res){                 // Post method is used to retrie
     var name = req.body.name;
     var email = req.body.Email;
     console.log(name+ " " + email); 
-    var data ={
+    var data ={                                      // This object was created to send the data through api and it was in the Documentation
         members:[
             {
                 email_address : email,
@@ -26,14 +26,20 @@ app.post("/",function(req,res){                 // Post method is used to retrie
           }
     ]
     };
-    var jsonData = JSON.stringify(data);
-    const url="https://us1.api.mailchimp.com/3.0/lists/0cf7c7bdd5";
-    const options={
+    var jsonData = JSON.stringify(data);             //used to stringify the Json object
+    const url="https://us1.api.mailchimp.com/3.0/lists/0cf7c7bdd5";             // personal key
+    const options={                                                      //Api documentation options had method + authentication
         method : "POST",
         auth : "vatsuvaksi:eb560156bf8438f0ff10b962ef68f0a2-us1"
     }
-   const request =  https.request(url,options, function(response){
-        response.on("data",function(data){
+   const request =  https.request(url,options, function(response){   //This is where the request is generated https functions
+    if(response.statusCode === 200){                      //checkes the status code to send a particular file success or fail html 
+        res.sendFile(__dirname +"/success.html")
+    }  else{
+        res.sendFile(__dirname +"/failure.html")
+    }
+
+    response.on("data",function(data){                         //Whenever we receive data response.on("data",call back function is used)
             console.log(JSON.parse(data));
         })
     })
