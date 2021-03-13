@@ -8,7 +8,7 @@ the technology stack used  -NodeJS ,ExpressJS , HTML, CSS , Bootstrap <br />
 ![Screenshot (337)](https://user-images.githubusercontent.com/62776100/111043665-b3ecb880-8469-11eb-962f-bb0556f53fba.png)
 
 
-#Adding a new memmber in the mailing list
+### Adding a new member in the mailing list
 
 ![Screenshot (339)](https://user-images.githubusercontent.com/62776100/111044806-c0284400-8470-11eb-8866-3d0dcb191083.png)
 
