@@ -1,5 +1,7 @@
 # NewsLetterAppExpressJS
-This is a news-letter application that lets the user subscribe to my personal news-letter list using MailChimp API and ExpressJS Framework.
+This is a news-letter application that lets the user subscribe to my personal news-letter list using MailChimp API and ExpressJS Framework.<br />
+the technology stack used  -NodeJS ,ExpressJS , HTML, CSS , Bootstrap <br /> 
+
 
 
 
