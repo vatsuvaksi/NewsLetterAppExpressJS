@@ -30,7 +30,7 @@ app.post("/",function(req,res){                 // Post method is used to retrie
     const url="https://us1.api.mailchimp.com/3.0/lists/0cf7c7bdd5";             // personal key
     const options={                                                      //Api documentation options had method + authentication
         method : "POST",
-        auth : "vatsuvaksi:eb560156bf8438f0ff10b962ef68f0a2-us1"
+        auth : "vatsuvaksi"
     }
    const request =  https.request(url,options, function(response){   //This is where the request is generated https functions
     if(response.statusCode === 200){                      //checkes the status code to send a particular file success or fail html 
@@ -49,10 +49,3 @@ app.post("/",function(req,res){                 // Post method is used to retrie
 
 
 
-/*API KEY
-
-eb560156bf8438f0ff10b962ef68f0a2-us1
-
-Unique Id
-0cf7c7bdd5
-*/
